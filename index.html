@@ -1,192 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Professional Resume - Jay Kale</title>
     <style>
-        body
-        {
-            width: 100vw;
-            height: 100vh;
+        body {
+            font-family: "Arial", sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
         }
-        .main-container
-        {
-            height: 100%;
-            width: 100%;
+
+        .resume {
+            width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
         }
-        .text-heading
-        {
-            height: auto;
-            font-size: 30px;
+
+        header {
             text-align: center;
+            border-bottom: 3px solid #333;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 28px;
             font-weight: bold;
         }
-        .box-one
-        {
-            height:600px;
-            width: 80%;
-            background-color:aliceblue  ;
-            margin-left: 100px;
-            border-radius: 10px;
-        }
-        h1{
-            text-align: center;
-            margin-top: 10px;
-        }
-        h2
-        {
-            margin-left: 50px;
 
+        h2 {
+            color: #444;
+            font-size: 22px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
         }
-        p
-        {
-            margin-left: 60px;
-            
+
+        ul {
+            list-style-type: none;
+            padding: 0;
         }
-        .box-two
-        {
-            height:430px;
-            width: 80%;
-            background-color:aliceblue  ;
-            margin-left: 100px;
-            border-radius: 10px;
+
+        ul li {
+            margin: 5px 0;
+            font-size: 16px;
         }
-        .box-three
-        {
-            height: 560px;
-            width: 80%;
-            background-color:aliceblue  ;
-            margin-left: 100px;
-            border-radius: 10px;
+
+        a {
+            color: #0073b1;
+            text-decoration: none;
+            font-weight: bold;
         }
-        .box-four
-        {
-            height: 500px;
-            width: 80%;
-            background-color:aliceblue  ;
-            margin-left: 100px;
-            border-radius: 10px;
+
+        .contact,
+        .linkedin {
+            font-size: 16px;
+            margin: 5px 0;
         }
-        img
-        {
-            width: 600px;
-            margin-left: 80px;
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .skill-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-item {
+            background: #0073b1;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .resume section {
+            margin-bottom: 25px;
+        }
+        img{
+            width: 6cm;
+     height: 6cm;
+     background-color: white;
+     border-radius: 50%;
+   
         }
     </style>
 </head>
+
 <body>
-    <div class="main-conatiener">
-        <div class="text-heading">
-       <p>Input/Output in Programing languages</p>
-    </div>
-    <div class="box-one">
-       <h1>Java</h1>
-       <h2>Java Code</h2>
-       <pre>
-        public class main {
-            public static void main(String[]args){
-                scanner input = new Sacnner(systen.in);
-                System.out.print("Name:");
-                String name = input.nextline();
-                int age =input ("Age:");
-                System.out.println("Hi I'm" + "name" + "and I'm" + age "year old");
-                input.close();
-            }
-        }
 
-        
-            public static void main (String[]args){
-            String name = "Ashish Naik";
-            int age =19;
-            System.out.println("Hi I'm" + "name" + "and I'm" + age "year old.");
-        }
-    
-       </pre>
-       <h2>
-        Output
-       </h2>
-        <p>
-            Enter your name : Ashish Naik <br/>
-            Enter your age : 19 <br/>
-            Hi I'm Ashish Naik and I'm 19 year old.
-        </p>
-       
-    </div>
-    </div>
-    <div class="box-two">
-      <h1>Python</h1>
-      <h2>Python Code</h2>
-      <pre>
-        name = input ("Enter your name :")
-        age =  input ("Enter your name :")
-        printf("Hello!,I'm{name}")
-        printf("I'm{age}year old")
+    <div class="resume">
+        <header>
+            <div class="header-content">
+                <div class="images">
+                <img src="../../../assets/images/shared_image-removebg-preview.png" alt="" height="200px" width="200px"></div>
+                <h1>JAY KALE</h1>
+                <p class="contact">Nagpur, Maharashtra, India | 📧 kalej544@gmail.com | 📞 +91 8766576841 </p>
+                <p class="linkedin"><a
+                        href="https://www.linkedin.com/in/jay-kale-5b837835a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        target="_blank">LinkedIn: jay-kale</a></p>
+            </div>
+        </header>
 
-        name = "Ashish Naik"
-        Age =19
-        printf("Hello!,I'm{name}")
-        printf(" and I'm{age}year old")
-      </pre>
-      <h2>
-        Output
-      </h2>
-      <p>
-        Enter your name : Ashish Naik <br/>
-        Enter your age : 19 <br/>
-        Hello! I'm Ashih Naik <br/>
-        and I'm 19 year old
+        <main>
+            <section class="career-objective">
+                <h2>Career Objective</h2>
+                <p>A **highly skilled Mechanical Engineering Diploma holder** with expertise in **AutoCAD, mechanical
+                    design, and 3D modeling**. Seeking an opportunity to apply technical proficiency and innovation in
+                    the automotive or mechanical engineering field.</p>
+            </section>
 
-      </p>
-    </div>
-    <div class="box-three">
-        <h1>C</h1>
-        <h2>C code</h2>
-        <pre>
-         #include <`stdio.h>
-            int main(){
-                char name[50];
-                int age ;
-                printf("Enter your name :");
-                sacnf(%"d",name);
-                printf("Enter your age :")
-                sacnf(%"d",age);
-                printf("Hi! I'm %"d" I'm %"d" year old \n"name,age);
-                return0;
+            <section class="skills">
+                <h2>Technical Skills</h2>
+                <div class="skill-grid">
+                    <div class="skill-item">🔹 <strong>AutoCAD</strong> – Advanced (90%)</div>
+                    <div class="skill-item">🔹 <strong>Technical Drawing</strong> – Proficient (85%)</div>
+                    <div class="skill-item">🔹 <strong>3D Modeling</strong> – Intermediate (75%)</div>
+                    <div class="skill-item">🔹 <strong>Mechanical Design</strong> – Proficient (85%)</div>
+                    <div class="skill-item">🔹 <strong>SolidWorks</strong> – Intermediate (75%)</div>
+                </div>
+            </section>
 
-                #include <`stdio.h>
-                int main(){
-                    char name[50]="Ashish Naik";
-                    int age =19;
-                    printf("Hi! I'm %"d" I'm %"d" year old \n"name,age);
-                    return0;
-                }
-            }
-        </pre>
-        <h2>
-            Output
-        </h2>
-        <p>
-            Enter your name : Ashish Naik <br/>
-            Enter your age : 19 <br/>
-            Hi!I'm Ashish Naik 
-            and I'm 19 year old
-        </p>
-    </div>
-    <div class="box-four">
-        <h1>Javascript</h1>
-        <h2>Javascript Code</h2>
-        <pre>
-            let name = "Ashish Naik";
-            console.log(name);
-            alert(name);
-            if (name){
-             alert("Hello !"+ name )
-            }
-        </pre>
-        <h2>Output</h2>
-        <img src="./assets/images/Screenshot 2025-04-17 at 07.05.46.png" alt="">
+            <section class="education">
+                <h2>Education</h2>
+                <p><strong>Diploma in Mechanical Engineering</strong> (2022 – 2025) <br> G.H. Raisoni College of
+                    Engineering and Management</p>
+                <p><strong>10th Standard</strong> <br> Banarasidas Ruiya English Medium High School</p>
+            </section>
 
+            <section class="experience">
+                <h2>Internship Experience</h2>
+                <p><strong>Mechanical Engineering Intern</strong> – Ketan Hyundai (Summer 2023)</p>
+                <ul>
+                    <li>✅ Diagnosed mechanical issues in Hyundai vehicles</li>
+                    <li>✅ Collaborated with senior technicians on maintenance tasks</li>
+                    <li>✅ Documented specifications and maintenance protocols</li>
+                    <li>✅ Gained hands-on exposure to engines, transmissions, and suspensions</li>
+                    <li>✅ Participated in final vehicle quality testing</li>
+                </ul>
+            </section>
+
+            <section class="achievements">
+                <h2>Projects & Achievements</h2>
+                <ul>
+                    <li>🏆 <strong>3D Engine Prototype Design</strong> – SolidWorks</li>
+                    <li>🏆 <strong>Winner</strong> – CAD Design Competition</li>
+                    <li>🏆 <strong>Participant</strong> – Technical Symposium for mechanical innovation</li>
+                </ul>
+            </section>
+
+            <section class="languages">
+                <h2>Languages</h2>
+                <ul>
+                    <li>🗣 <strong>English</strong> – Professional</li>
+                    <li>🗣 <strong>Hindi</strong> – Native</li>
+                    <li>🗣 <strong>Marathi</strong> – Native</li>
+                </ul>
+            </section>
+
+            <section class="interests">
+                <h2>Interests</h2>
+                <p>🚗 Automotive Engineering | ⚙️ Mechanical Innovation | 🏗 Machine Design</p>
+            </section>
+        </main>
     </div>
+
 </body>
+
 </html>
