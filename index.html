@@ -3,175 +3,206 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Resume - Jay Kale</title>
+    <meta name="viewport"
+        content="width=                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    , initial-scale=1.0">
+    <title>Dashboard</title>
     <style>
         body {
-            font-family: "Arial", sans-serif;
-            background: #f4f4f4;
+            width: 100vw;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+
         }
 
-        .resume {
-            width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        header {
-            text-align: center;
-            border-bottom: 3px solid #333;
-            padding-bottom: 20px;
-        }
-
-        h1 {
-            color: #333;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        h2 {
-            color: #444;
-            font-size: 22px;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-        }
-
-        ul {
-            list-style-type: none;
+        .main-container {
+            width: 100%;
+            display: grid;
+            margin: 0;
             padding: 0;
         }
 
-        ul li {
-            margin: 5px 0;
-            font-size: 16px;
+        .header {
+
+            width: 100%;
+            height: 100px;
+            background-color: #2A4759;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
         }
 
-        a {
-            color: #0073b1;
-            text-decoration: none;
-            font-weight: bold;
+        .left {
+            width: 100%;
+            height: 100%;
         }
 
-        .contact,
-        .linkedin {
-            font-size: 16px;
-            margin: 5px 0;
+        .right {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 20px;
         }
 
-        p {
-            font-size: 16px;
-            line-height: 1.8;
+        .middle-section {
+            width: 100%;
+            height: 580px;
+            background-color: #EFEEEA;
+            display: grid;
+            grid-template-areas:
+                "sidebar main main rightbar";
         }
 
-        .skill-grid {
-            display: flex;
-            flex-wrap: wrap;
+        .sidebar {
+            grid-area: sidebar;
+            width: 90%;
+            height: 100%;
+            background-color: #2A4759;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        .main {
+            grid-area: main;
+            width: 100%;
+            height: 100%;
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .box {
+            width: 100%;
+            height: 80%;
+            background-color: azure;
+            border-radius: 20px;
+        }
+
+        .rightbar {
+            grid-area: rightbar;
+            width: 90%;
+            height: 100%;
+            background-color: rgb(28, 139, 139);
+            margin-top: 10px;
+            margin-left: 45px;
+            border-radius: 10px;
+            gap: 20px;
+        }
+
+        .footer {
+
+            width: 100%;
+            height: 100px;
+            background-color: #adb0b1;
             gap: 10px;
+            margin-top: 20px;
+            border-radius: 10px;
         }
 
-        .skill-item {
-            background: #0073b1;
+        h1 {
             color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-weight: bold;
+            margin-left: 10px;
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
-        .resume section {
-            margin-bottom: 25px;
+        h3 {
+            color: white;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 450px;
+            margin-bottom: 40px;
         }
-        img{
-            width: 6cm;
-     height: 6cm;
-     background-color: white;
-     border-radius: 50%;
-   
+
+        h2 {
+            color: lightgrey;
+            margin-left: 20px;
+        }
+
+        h4 {
+            color: white;
+            font-size: 30px;
+            margin-left: 20px;
+        }
+
+        .box-one {
+            width: 80%;
+            height: 10%;
+            background-color: white;
+            border-radius: 20px;
+            margin-left: 30px;
+            
+        }
+        .box-two {
+            width: 80%;
+            height: 10%;
+            background-color: white;
+            border-radius: 20px;
+            margin-left: 30px;
+            margin-top: 10px;
+            
+        }
+        .box-three {
+            width: 80%;
+            height: 10%;
+            background-color: white;
+            border-radius: 20px;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+
+        h5{
+            font-size: 20px;
+            margin-left: 20px;
+        }
+        p{
+            font-size: 25px;
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+        nav{
+            text-align: center;
+            font-size: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
 
 <body>
-
-    <div class="resume">
-        <header>
-            <div class="header-content">
-                <div class="images">
-                <img src="../../../assets/images/shared_image-removebg-preview.png" alt="" height="200px" width="200px"></div>
-                <h1>JAY KALE</h1>
-                <p class="contact">Nagpur, Maharashtra, India | 📧 kalej544@gmail.com | 📞 +91 8766576841 </p>
-                <p class="linkedin"><a
-                        href="https://www.linkedin.com/in/jay-kale-5b837835a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                        target="_blank">LinkedIn: jay-kale</a></p>
+    <div class="main-container">
+        <div class="header">
+            <div class="left">
+                <h1>My Dashboard</h1>
             </div>
-        </header>
+            <div class="right">
+                <h3>👤 Admin</h3>
+            </div>
+        </div>
+        <div class="middle-section">
 
-        <main>
-            <section class="career-objective">
-                <h2>Career Objective</h2>
-                <p>A **highly skilled Mechanical Engineering Diploma holder** with expertise in **AutoCAD, mechanical
-                    design, and 3D modeling**. Seeking an opportunity to apply technical proficiency and innovation in
-                    the automotive or mechanical engineering field.</p>
-            </section>
+            <div class="sidebar">
 
-            <section class="skills">
-                <h2>Technical Skills</h2>
-                <div class="skill-grid">
-                    <div class="skill-item">🔹 <strong>AutoCAD</strong> – Advanced (90%)</div>
-                    <div class="skill-item">🔹 <strong>Technical Drawing</strong> – Proficient (85%)</div>
-                    <div class="skill-item">🔹 <strong>3D Modeling</strong> – Intermediate (75%)</div>
-                    <div class="skill-item">🔹 <strong>Mechanical Design</strong> – Proficient (85%)</div>
-                    <div class="skill-item">🔹 <strong>SolidWorks</strong> – Intermediate (75%)</div>
-                </div>
-            </section>
-
-            <section class="education">
-                <h2>Education</h2>
-                <p><strong>Diploma in Mechanical Engineering</strong> (2022 – 2025) <br> G.H. Raisoni College of
-                    Engineering and Management</p>
-                <p><strong>10th Standard</strong> <br> Banarasidas Ruiya English Medium High School</p>
-            </section>
-
-            <section class="experience">
-                <h2>Internship Experience</h2>
-                <p><strong>Mechanical Engineering Intern</strong> – Ketan Hyundai (Summer 2023)</p>
-                <ul>
-                    <li>✅ Diagnosed mechanical issues in Hyundai vehicles</li>
-                    <li>✅ Collaborated with senior technicians on maintenance tasks</li>
-                    <li>✅ Documented specifications and maintenance protocols</li>
-                    <li>✅ Gained hands-on exposure to engines, transmissions, and suspensions</li>
-                    <li>✅ Participated in final vehicle quality testing</li>
-                </ul>
-            </section>
-
-            <section class="achievements">
-                <h2>Projects & Achievements</h2>
-                <ul>
-                    <li>🏆 <strong>3D Engine Prototype Design</strong> – SolidWorks</li>
-                    <li>🏆 <strong>Winner</strong> – CAD Design Competition</li>
-                    <li>🏆 <strong>Participant</strong> – Technical Symposium for mechanical innovation</li>
-                </ul>
-            </section>
-
-            <section class="languages">
-                <h2>Languages</h2>
-                <ul>
-                    <li>🗣 <strong>English</strong> – Professional</li>
-                    <li>🗣 <strong>Hindi</strong> – Native</li>
-                    <li>🗣 <strong>Marathi</strong> – Native</li>
-                </ul>
-            </section>
-
-            <section class="interests">
-                <h2>Interests</h2>
-                <p>🚗 Automotive Engineering | ⚙️ Mechanical Innovation | 🏗 Machine Design</p>
-            </section>
-        </main>
+                <h2> 🏠Dashboard</h2><br />
+                <h2> 📊Analytics</h2><br />
+                <h2> 🛠Settings</h2><br />
+                <h2> 📁Files</h2><br />
+                <h2>🚪Logout</h2><br />
+            </div>
+            <div class="main">
+                <div class="box"><h5>📈Sales Report</h5></div>
+                <div class="box"><h5>📅Schedule</h5></div>
+                <div class="box"><h5>💭Message</h5></div>
+                <div class="box"><h5>🔔Alerts</h5></div>
+            </div>
+            <div class="rightbar">
+                <h4>Notifications</h4>
+                <div class="box-one"><p>✔Task completed</p></div>
+                <div class="box-two"><p>🔔New alert</p></div>
+                <div class="box-three"><p>📩New message</p></div>
+            </div>
+        </div>
+        <div class="footer">
+            <nav>ⓒ 2025 Admin Panel</nav>
+        </div>
     </div>
-
 </body>
 
 </html>
