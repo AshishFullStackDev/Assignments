@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bill Calculator</title>
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form-container {
+      width: 100%;
+      height: 40%;
+      background-color: aqua;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .form-container input {
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    .form-container button {
+      padding: 6px 12px;
+      font-size: 16px;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px 16px;
+    }
+
+    th {
+      background-color: lightgray;
+    }
+
+    caption {
+      caption-side: top;
+      font-size: 24px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="form-container">
+      <h1>Input Data</h1>
+      <form onsubmit="addBill(event)">
+        <input type="text" placeholder="Product Name" id="product-name">
+        <input type="text" placeholder="Product Price" id="product-price">
+        <input type="text" placeholder="Product Quantity" id="product-quantity">
+        <button type="submit">Add</button>
+      </form>
+    </div>
+    <div class="bill-container">
+      <table>
+        <caption>Bill</caption>
+        <tr class="table-heading">
+          <th>Product Name</th>
+          <th>Product Price</th>
+          <th>Product Quantity</th>
+          <th>Total</th>
+        </tr>
+        <tr>
+          <td id="show-product-name"></td>
+          <td id="show-product-price"></td>
+          <td id="show-product-quantity"></td>
+          <td id="show-total"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    let billArray = [];
+
+    function addBill() {
+      let productName = document.getElementById("product-name").value;
+      let productPrice = Number(document.getElementById("product-price").value);
+      let productQuantity = Number(document.getElementById("product-quantity").value);
+
+      billArray.push({
+        productName: productName,
+        productPrice: productPrice,
+        productQuantity: productQuantity
+      });
+
+      document.getElementById("product-name").value = "";
+      document.getElementById("product-price").value = "";
+      document.getElementById("product-quantity").value = "";
+
+      showBill();
+    }
+
+    function showBill() {
+      let displayTable ="";
+      for (let i = 0; i < billArray.length; i++){
+      displayTable += `
+      <tr class ="table data">
+      <td>${billArray[i].product_name}</td>
+      <td>${billArray[i].product_price}</td>
+      <td>${billArray[i].product_quantity}</td>
+      <td>${billArray[i].product_price * billArray[i].billArray[i].product_quantity}</td>
+      </tr>
+      `
+      document.getElementById("table-bill").innerHTML= displayTable
+      }
+    }
+  </script>
+</body>
+
+</html>

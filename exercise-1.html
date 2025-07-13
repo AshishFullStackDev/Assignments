@@ -1,20 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .sunday{
+        background-color: #63C8FF;
+    }
+.monday{
+    background-color: #FAEB92;
+}
+.tuesday{
+    background-color: #CC66DA;
+}
+</style>
+
 <body>
+    <div class="container">
+        <button onclick="getDays()">Get Days</button>
+    </div>
+    
+
     <script>
-        let num =10;
-        alert(num);
 
-        var string  ="hello";
-        alert(string);
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        function getDays(){
+            let inputDay =Number(prompt("Enter a day number (0-6):"));
+            if (inputDay >=0 && inputDay <= 6){
+                if(inputDay == 0){
+                    document.getElementById("container").innerHTML = 
+                    ` <button onclick="getDays()">getDays</button>
+                    <day class ="day sunday">
+                        <p>Today is :${weekDays[inputDay]}</p>
+                        </day>`;
+                }
+                if(inputDay == 1){
+                    document.getElementById("container").innerHTML = 
+                    ` <button onclick="getDays()">Days</button>
+                    <day class ="day monday">
+                        <p>Today is :${weekDays[inputDay]}</p>
+                        </day>`;
+                }
+                if(inputDay == 2){
+                    document.getElementById("container").innerHTML = 
+                    ` <button onclick="getDays()">Days</button>
+                    <day class ="day tuesday">
+                        <p>Today is :${weekDays[inputDay]}</p>
+                        </day>`;
+                }
+                if(inputDay == 3){
+                    document.getElementById("container").innerHTML = 
+                    ` <button onclick="getDays()">Days</button>
+                    <day class ="day wednesday">
+                        <p>Today is :${weekDays[inputDay]}</p>
+                        </day>`;
+                }
+                if(inputDay == 4){
+                    document.getElementById("container").innerHTML = 
+                    ` <button onclick="getDays()">Days</button>
+                    <day class ="day thursday">
+                        <p>Today is :${weekDays[inputDay]}</p>
+                        </day>`;
+                }
+                if(inputDay == 5){
+                    document.getElementById("container").innerHTML = 
+                    ` <button onclick="getDays()">Days</button>
+                    <day class ="day friday">
+                        <p>Today is :${weekDays[inputDay]}</p>
+                        </day>`;
+                }
+                if(inputDay == 6){
+                    document.getElementById("container").innerHTML = 
+                    ` <button onclick="getDays()">Days</button>
+                    <day class ="day saturday">
+                        <p>Today is :${weekDays[inputDay]}</p>
+                        </day>`;
+                }
+            }
 
-        var string ="bye"
-        alert(string)
+        }
+            
+                
+            
     </script>
 </body>
+
 </html>
