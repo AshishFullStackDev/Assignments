@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Student Information Form</title>
+    <style>
+        body
+        {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .main-container
+        {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            
+        }
+        .box-one
+        {
+            width: 80%;
+            height: 70%;
+            background-color: antiquewhite;
+            margin-left: 120px;
+            margin-top: 20px;
+        }
+        .box-two
+        {
+            width: 80%;
+            height: 70%;
+            background-color: cadetblue;
+            margin-top: 20px;
+            margin-right: 50px;
+        }
+        label
+        {
+            font-size: 35px;
+            margin-left: 10px;
+            
+        }
+        input
+        {
+            font-size: 25px;
+           
+        }
+        p
+        {
+            font-size: 30px;
+            margin-left:10px ;
+        }
+        button{
+            font-size: 25px;
+            margin-left: 230px;
+            margin-top: 20px;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="box-one">
+            <h2>Student Information </h2><br />
+            <label>Name:</label>
+            <input type="text" id="firstname"><br /><br />
+            <label>Age:</label>
+            <input type="text" id="age"><br /><br />
+            <label>Address:</label>
+            <input type="text" id="address"><br /><br />
+            <label>Mob.No:</label>
+            <input type="number" id="mob.no"><br /><br />
+            <label>Email:</label>
+            <input type="text" id="email"><br /><br />
+            <button onclick="showName()">Submit</button>
+        </div>
+
+        <div class="box-two">
+            <h2>Student Info Preview</h2>
+            <p id="DisplayName">Name:</p>
+            <p id="DisplayAge">Age:</p>
+            <p id="DisplayAddress">Address:</p>
+            <p id="DisplayMob.No">Mob.No:</p>
+            <p id="DisplayEmail">Email:</p>
+        </div>
+    </div>
+    <script>
+        function showName() {
+            // name input and output
+            let name = document.getElementById("firstname").value;
+            document.getElementById("DisplayName").innerHTML = "Name: " + name;
+
+            //age input and output
+            let age = document.getElementById("age").value;
+            document.getElementById("DisplayAge").innerHTML = "Age:" + age;
+
+            // address input and output
+            let address = document.getElementById('address').value;
+            document.getElementById("DisplayAddress").innerHTML = "Address:" + address ;
+
+            // Mob.No input and output
+            let number = document.getElementById('mob.no').value;
+            document.getElementById("DisplayMob.No").innerHTML = "Mob.no:" + mob.no;
+
+            // email input and output
+            let email = document.getElementById('email').value;
+            document.getElementById("DisplayEmail").innerHTML = "Email:" + email ;
+
+        }
+    </script>
+</body>
+
+</html>

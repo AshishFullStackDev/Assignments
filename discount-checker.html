@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-container">
+    <label for="cart">Enter your cart Total:</label>
+    <input type="text" name="" id="input-cart">
+    <br/>
+    <input type="checkbox" value="isMemner" id="checkbox"><label for="">I am a member</label>
+    <br/>
+    <br/>
+    <button onclick="getValue()">Get Value</button>
+</div>
+    <script>
+      function getValue(){
+        let value = document.getElementById('checkbox').checked;
+      let cartTotal =document.getElementById('input-cart').value
+
+      if(cartTotal >= 50 && value == true)
+        alert('Discount applies')
+
+        else{
+            alert("discont not applies");
+        }
+      }
+
+    </script>
+</body>
+</html>

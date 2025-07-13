@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1> Is Today Saturday or Sunday</h1>
+   <button> </button>
+    </div>
+    <script>
+        let day =new Date().getDay();
+        let date =new Date();
+        let displayMessage =""
+
+        if (day == 1 || day ==7){
+        displayMessage = "Today is weekend"
+        }
+        else{
+            displayMessage = "Today is weekday"
+        }
+        alert(displayMessage + "\n" + date);
+        console.log(displayMessage);
+        
+    </script>
+</body>
+</html>

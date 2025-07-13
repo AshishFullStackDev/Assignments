@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: gray;
+            padding: 0;
+        }
+
+        .main-container {
+            width: 80%;
+            height: 80%;
+            background-color: white;
+            border-radius: 10px;
+            margin-left: 140px;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 30px;
+
+        }
+
+        .btn {
+            width: 250px;
+            height: 30px;
+            margin-left: 450px;
+
+        }
+
+        .container {
+            width: 80%;
+            height: 65%;
+            background-color: gray;
+            margin-left: 120px;
+            border-radius: 10px;
+            margin-top: 60px;
+        }
+
+        h3 {
+            margin-left: 30px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <p><strong>JavaScript Data Types</strong></p><br />
+        <button onclick="click()" class="btn">Show Data Types</button>
+        <div class="container" id="display">
+
+        </div>
+
+    </div>
+    <script>
+        function check() {
+            let num = 42;
+            let datatype1 = typeof num;
+
+            alert("Value is :" + num + "\n Datatype is :" + datatype1);
+            document.getElementById("display").innerHTML = result1;
+
+            let boolvalue = true;
+            let datatype2 = typeof Boolean;
+        }
+
+    </script>
+</body>
+
+</html>

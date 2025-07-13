@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Number 1 = <span id="num-1"></span> </p>
+    <p>Number 2 = <span id="num-2"></span> </p>
+    <input type="number" id="input" placeholder="Enter your Number"><br/>
+    <button onclick="getNumber()">Get Numbers</button>
+    <br/>
+    <br/>
+
+    <button onclick="checkAnswer()">Submit Answer</button>
+
+    <p id="result">Result</p>
+    <script>
+        let num1 = 0;
+        let num2 = 0;
+
+        let multi =0;
+        let temp =0;
+
+        function getNumber(){
+            let num1 = Math.floor( Math.random()*10 + 1);
+            let num2 = Math.floor( Math.random()*10 + 1);
+
+            document.getElementById("num-1").innerHTML =num1;
+            document.getElementById("num-2").innerHTML =num2;
+
+            multi = num1 * num2;
+            temp =multi;
+        }
+        function checkAnswer(){
+            let userAnswer =document.getElementById("input").value;
+            document.getElementById("result").innerHTML =
+            userAnswer =multi;
+        }
+    </script>
+</body>
+</html>

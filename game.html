@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multiplication Game with Timer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e3f2fd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .game-box {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 320px;
+    }
+    input, button {
+      padding: 10px;
+      width: 100%;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    #result, #score, #timer {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+    #timer {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-box">
+    <h2>Multiplication Game</h2>
+    <p>Round: <span id="round">1</span>/5</p>
+    <p><span id="num1">0</span> × <span id="num2">0</span></p>
+    <input type="number" id="answer" placeholder="Enter your answer" />
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="timer">Time left: 10s</p>
+    <p id="result"></p>
+    <p id="score">Score: 0</p>
+  </div>
+
+  <script>
+    let round = 1;
+    let score = 0;
+    let correct = 0;
+    let timer;
+    let timeLeft = 10;
+
+    let num1 = 0;
+    let num2 = 0;
+
+    function startTimer() {
+      clearInterval(timer); // clear old timer
+      timeLeft = 10;
+      document.getElementById("timer").textContent = `Time left: ${timeLeft}s`;
+
+      timer = setInterval(() => {
+        timeLeft--;
+        document.getElementById("timer").textContent = `Time left: ${timeLeft}s`;
+        if (timeLeft === 0) {
+          clearInterval(timer);
+          document.getElementById("result").textContent = `⏰ Time's up! Correct was ${correct}`;
+          round++;
+          setTimeout(playRound, 1000);
+        }
+      }, 1000);
+    }
+
+    function playRound() {
+      if (round <= 5) {
+        num1 = Math.floor(Math.random() * 10 + 1);
+        num2 = Math.floor(Math.random() * 10 + 1);
+        correct = num1 * num2;
+
+        document.getElementById("num1").textContent = num1;
+        document.getElementById("num2").textContent = num2;
+        document.getElementById("round").textContent = round;
+        document.getElementById("answer").value = "";
+        document.getElementById("result").textContent = "Solve it quickly!";
+        document.getElementById("answer").disabled = false;
+        document.querySelector("button").disabled = false;
+
+        startTimer();
+      } else {
+        document.getElementById("result").textContent += " 🎮 Game Over!";
+        document.querySelector("button").disabled = true;
+        document.getElementById("answer").disabled = true;
+        document.getElementById("timer").textContent = "";
+      }
+    }
+
+    function checkAnswer() {
+      clearInterval(timer); // stop the timer
+      let userAns = parseInt(document.getElementById("answer").value);
+      if (userAns === correct) {
+        score++;
+        document.getElementById("result").textContent = "✅ Correct!";
+      } else {
+        document.getElementById("result").textContent = `❌ Wrong! Correct answer was ${correct}`;
+      }
+      document.getElementById("score").textContent = `Score: ${score}`;
+      round++;
+
+      // Disable button to prevent double submit
+      document.querySelector("button").disabled = true;
+      document.getElementById("answer").disabled = true;
+
+      // Go to next question after 1 second
+      setTimeout(playRound, 1000);
+    }
+
+    // Start the first round
+    playRound();
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./js-class-four.css">
+</head>
+<body>
+    <div class="week-container">
+    <button onclick="showDays ('Sunday')">Sunday
+        <p id="display"></p>
+    
+    <button onclick="showDays ('Monday')">Monday</button>
+    <button onclick="showDays ('Tuesday')">Tuesday</button>
+    <button onclick="showDays ('Wednesday')">Wednesday</button>
+    <button onclick="showDays ('Thursday')">Thursday</button>
+    <button onclick="showDays ('Friday')">Friday</button>
+    <button onclick="showDays ('Saturday')">Saturday</button>
+</div>
+<script>
+    let count =4;
+    function showDays(day){
+         count += 2;
+        document.getElementById("display").innerHTML = count;
+       
+    }
+</script>
+</body>
+</html>

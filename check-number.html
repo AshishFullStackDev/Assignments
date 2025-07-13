@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <div class="main-container">
+    <div class="container">
+        <h1>Even Number Checker</h1>
+        <br/>
+        <h2>(Using Bitwise AND Operator)</h2>
+        <br/>
+        <label for="">Enter a number:</label>
+        <input type="number" name="" id="number">
+        <br/>
+        <button>Check Even/Odd</button>
+        <br/>
+        <p id="display"></p>
+    </div>
+ </div>
+    <script>
+        let num1 = Number(prompt("Enter a number:"));
+        let result = "";
+        
+
+        if ((number & 1) ==0){
+            result ="Number is even";
+        }
+        else{
+            result ="Number is odd";
+        }
+        alert(result);
+    </script>
+</body>
+</html>

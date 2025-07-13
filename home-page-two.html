@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-container {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .nav-sec {
+            width: 100%;
+            height: 9%;
+            background-color: #254D70;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .section {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            color: white;
+
+        }
+
+        nav {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+
+        h2 {
+            margin-left: 50px;
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .home-sec {
+            width: 100%;
+            height: 90%;
+            text-align: center;
+            
+           
+        }   
+        .text-sec{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+        .home-sec h1 {
+            color: #003366;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 50px;
+        }
+
+        .home-sec h3 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #2A4759;
+            font-size: 22px;
+
+        }
+
+        .btn {
+            width: 10%;
+            height: 5%;
+            border-radius: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="nav-sec">
+            <div class="title">
+                <h2>AshishNaik</h2>
+            </div>
+            <div class="section">
+                <nav>Home</nav>
+                <nav>About</nav>
+                <nav>Projects</nav>
+                <nav>Skills</nav>
+                <nav>Contact</nav>
+            </div>
+        </div>
+        <div class="home-sec">
+            <div class="text-sec">
+            <img src="" alt="">
+            <h1> Hello,I'm Ashish Naik</h1>
+            <h3>Full Stack Developer | AI Enthusiasts</h3>
+            <h3>"Merging creativity with intelligence — Full Stack & AI Explorer."</h3>
+            <button class="btn">Get In Touch</button><button class="btn">View Work</button>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>

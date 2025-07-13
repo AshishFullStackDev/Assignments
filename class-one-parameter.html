@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="display"></p>
+    <script>
+        function factorial(number){
+            if(number === 0){
+                return 1;
+            }
+            else{
+                return number * factorial(number - 1);
+            }
+        }
+        let output = factorial(9);
+        console.log(output)
+        
+
+        function incrementNumber(start,end){
+            if(start <= end)
+        {
+           document.getElementById("display").innerHTML += start +",";
+           console.log(start);
+           incrementNumber(start +1,end);
+        }
+        else{
+            console.log(end);
+            
+        };
+        }
+        let output2 =incrementNumber(1,10);
+        console.log(output);
+
+    </script>
+</body>
+</html>

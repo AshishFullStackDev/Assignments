@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PIN Guessing</title>
+</head>
+<body>
+    <h2>Enter PIN</h2>
+    <input type="text" id="pin">
+    <button onclick="guessPin()">Check</button>
+    <h3 id="display"></h3>
+
+    <script>
+        let secretPIN = "1234";
+        let userAttempt = 0;
+        let maxAttempts = 4;
+
+        function guessPin() {
+            const pin = document.getElementById("pin").value;
+
+            if (userAttempt >= maxAttempts) {
+                document.getElementById("display").innerText = " Your attempts are over!";
+                return;
+            }
+
+            userAttempt++;
+
+            if (pin === secretPIN) {
+                document.getElementById("display").innerText = " Pin is correct!";
+                alert(" Pin is correct!")
+            } else {
+                if (userAttempt === maxAttempts) {
+                    document.getElementById("display").innerText = " Your attempts are over!";
+                    alert(" Your attempts are over!")
+                } else {
+                    document.getElementById("display").innerText = ` Incorrect PIN. Attempts left: ${maxAttempts - userAttempt}`;
+                    alert(" Incorrect PIN. Attempts left")
+                }
+            }
+        }
+    </script>
+</body>
+</html>

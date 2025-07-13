@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-container {
+            width: 100%;
+            height: 100%;
+            background-color: #F8F8E1;
+        }
+
+        .display-box {
+            width: 100%;
+            height: 60%;
+            background-color: lightblue;
+            display: grid;
+
+        }
+
+        span {
+            font-size: 40px;
+            font-family: "Ancizar Serif", serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-style: normal;
+            text-align: center;
+            margin-top: 100px;
+
+        }
+
+        p {
+            font-size: 40px;
+            font-family: "Ancizar Serif", serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-style: normal;
+            text-align: center;
+        }
+
+        .btn-group {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+        }
+
+        .btn {
+            height: 100px;
+            background-color: cadetblue;
+            border-radius: 10px;
+            margin-top: 10px;
+            font-size: 30px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Changing the color after clicking the button -->
+    <div class="main-container" id="main-container">
+        <div class="display-box" id="display-box">
+            <span>Welcome to Universal Calender</span>
+            <p id="display"></p>
+        </div>
+        <div class="btn-group">
+            <button class="btn" onclick="displaySunday()" id="sunday">Sunday</button>
+            <button class="btn" onclick="displayMonday()" id="monday">Monday</button>
+            <button class="btn" onclick="displayTuesday()" id="tuesday">Tuesday</button>
+            <button class="btn" onclick="displayWednesday()" id="wednesday">Wednesday</button>
+            <button class="btn" onclick="displayThursday()" id="thursday">Thursday</button>
+            <button class="btn" onclick="displayfriday()" id="friday">Friday</button>
+            <button class="btn" onclick="displaySaturday()" id="saturday">Saturday</button>
+        </div>
+    </div>
+    <script>
+        function displaySunday() {
+            document.getElementById("display").innerHTML = "Today is a Sunday!";
+            document.getElementById("main-container").style.background = "#94B4C1";
+            document.getElementById("display-box").style.background = "#FFE8CD";
+            document.getElementById("sunday").style.background = "#273F4F";
+            document.getElementById("display-box").style.color = "#0118D8";
+        }
+        function displayMonday() {
+            document.getElementById("display").innerHTML = "Today is a Monday!";
+            document.getElementById("main-container").style.background = "#94B4C1";
+            document.getElementById("display-box").style.background = "#FFFA8D";
+            document.getElementById("monday").style.background = "#273F4F";
+            document.getElementById("display-box").style.color = "#A62C2C";
+        }
+        function displayTuesday() {
+            document.getElementById("display").innerHTML = "Today is a Tuesday!";
+            document.getElementById("main-container").style.background = "#94B4C1";
+            document.getElementById("display-box").style.background = "#F8B55F";
+            document.getElementById("tuesday").style.background = "#273F4F";
+            document.getElementById("display-box").style.color = "#123458";
+        }
+        function displayWednesday() {
+            document.getElementById("display").innerHTML = "Today is a Wednesday!";
+            document.getElementById("main-container").style.background = "#94B4C1";
+            document.getElementById("display-box").style.background = "#E9F5BE";
+            document.getElementById("wednesday").style.background = "#273F4F";
+            document.getElementById("display-box").style.color = "#16610E";
+        }
+        function displayThursday() {
+            document.getElementById("display").innerHTML = "Today is a Thursday!";
+            document.getElementById("main-container").style.background = "#94B4C1";
+            document.getElementById("display-box").style.background = "#81E7AF";
+            document.getElementById("thursday").style.background = "#273F4F";
+            document.getElementById("display-box").style.color = "#0E2148";
+        }
+        function displayfriday() {
+            document.getElementById("display").innerHTML = "Today is a Friday!";
+            document.getElementById("main-container").style.background = "#94B4C1";
+            document.getElementById("display-box").style.background = "#FFFBDE";
+            document.getElementById("friday").style.background = "#273F4F";
+            document.getElementById("display-box").style.color = "#2A4759";
+        }
+        function displaySaturday() {
+            document.getElementById("display").innerHTML = "Today is a Saturday";
+            document.getElementById("main-container").style.background = "#94B4C1";
+            document.getElementById("display-box").style.background = "#F1BA88";
+            document.getElementById("display-box").style.color = "#3A0519";
+            document.getElementById("saturday").style.background = "#273F4F";
+        }
+    </script>
+</body>
+
+</html>

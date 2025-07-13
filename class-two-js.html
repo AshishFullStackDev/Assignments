@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        .container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            width: 300px;
+            height: 50px;
+            background-color: green;
+            
+        }
+     </style>
+</head>
+<body>
+    <div class="container">
+    <p id="display"></p>
+    <button onclick="switchTwoExample()">Click</button>
+</div>
+    <script>
+       function switchTwoExample(){
+        let fruits =prompt("Enter a fruit name:");
+
+        switch(fruits){
+            case"apple":
+            display ="Apple is red";
+            alert(display);
+            break;
+
+            case"banana":
+            display ="banana is yellow";
+            alert(display);
+            break;
+
+            case"orange":
+            display ="orange is orange";
+            alert(display);
+            break;
+
+            default:
+                display ="Invalid fruit"
+                alert(display)
+        }
+       }
+    </script>
+</body>
+</html>

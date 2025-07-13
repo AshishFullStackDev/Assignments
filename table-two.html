@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height:100vh ;
+            
+        }
+        .result{
+            font-size: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <input type="number"  id="input">
+    <button onclick="getTable()">Table</button>
+    <p id="result" class="result"></p>
+    <script>
+        function getTable(){
+            let number = Number(prompt("Enter a Number:"));
+            let table = "";
+            for (let i =1;i<=10; i++){
+                table += number * i + "<br/>"
+            }
+            document.getElementById("result").innerHTML =table;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Number 1 = <span id="num-1"></span> </p>
+    <p>Number 2 = <span id="num-2"></span> </p>
+
+    <button onclick="getNumber()">Get Numbers</button>
+    <script>
+        function getNumber(){
+            let num1 = Math.floor( Math.random()*10 + 1);
+            let num2 = Math.floor( Math.random()*10 + 1);
+
+            document.getElementById("num-1").innerHTML =num1;
+            document.getElementById("num-2").innerHTML =num2;
+
+        }
+    </script>
+</body>
+</html>

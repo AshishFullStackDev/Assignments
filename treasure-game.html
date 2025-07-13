@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-container {
+            width: 100%;
+            height: 100%;
+            background-color: burlywood;
+            padding-top: 50px;
+        }
+
+        .container-one {
+            width: 40%;
+            height: 80%;
+            background-color: white;
+            margin-left: 450px;
+            border-radius: 10px;
+            margin-top: 25px;
+
+
+        }
+
+        .coin {
+            font-size: 30px;
+            text-align: center;
+            margin-top: 20px;
+            color: orange;
+        }
+
+        p {
+            font-size: 30px;
+            font-weight: 800;
+        }
+        img{
+            margin-left: 200px;
+            margin-top: 20px;
+        }
+        h2{
+            text-align: center;
+            color: rgb(180, 145, 99);
+        }
+        .btn-one{
+            width: 25%;
+            height: 8%;
+            font-size: 20px;
+            margin-left: 150px;
+            background-color: rgb(236, 223, 87);
+            color: brown;
+            border-radius: 5px;
+        }
+        .btn-two{
+            width: 25%;
+            height: 8%;
+            font-size: 20px;
+            margin-left: 5px;
+            background-color: rgb(236, 223, 87);
+            color: brown;
+            border-radius: 5px;
+        }
+        .add{
+            color:rgb(180, 145, 99) ;
+            text-align: center;
+            padding: 0;
+            
+        }
+        .sub{
+            color:rgb(180, 145, 99);
+            text-align: center;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container-one">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd8sHqbZdV1yHB0vzGMgqzSzazsvntuM34n9WK_Ut5a5h57Qc14YK1lVdd0yQjbw-Oyx4&usqp=CAU"
+              width="200px"  alt="">
+              <h2>Gold Coins in Chest</h2>
+            <p id="coin" class="coin"></p>
+
+            <button onclick="addCoin()" class="btn-one">+Add </button>
+            <button onclick="subtractCoin()" class="btn-two">- Subtract  </button>
+
+
+            <p id="add-coin" class="add"></p>
+            <p id="subtract-coin" class="sub"></p>
+        </div>
+    </div>
+</body>
+<script>
+    let coin = 0;
+    document.getElementById("coin").innerHTML = coin;
+
+    function addCoin() {
+        let getCoin = Number(prompt("Enter the coin"));
+        coin += getCoin;
+        document.getElementById("coin").innerHTML = coin;
+        document.getElementById("add-coin").innerHTML = "Added coin =" + getCoin;
+    }
+    function subtractCoin() {
+        let lossCoin = Number(prompt("Enter the coin"));
+        coin -= lossCoin;
+        document.getElementById("coin").innerHTML = coin;
+        document.getElementById("subtract-coin").innerHTML = "Subtracted coin =" + lossCoin;
+    }
+
+</script>
+
+</html>

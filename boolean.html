@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="conatiner">
+       
+
+        <h1>JavaScript Fan Check</h1>
+
+        <input type="radio" id="jsfan" name="fan" value="true">
+        <label for="js-fan">I am a JavaScript fan</label>
+        <input type="radio" id="not-jsfan" name="fan" value="false">
+        <label for="not-js-fan">I am not a JavaScript fan</label><br>
+        <button onclick="fanCheck()">Check</button>
+
+        <p id="result">waiting for your response...</p>
+    </div>
+   <script>
+    function fanCheck(){
+        // ask the user they are javascript fan
+    // const jsfan =confirm("Are you a JavaScript fan ?");
+    // document.getElementById("result").textContent = isfan;
+     let answer ="";
+     
+    yes= document.getElementById("js-fan").value;
+    if (yes == "true"){
+        answer ="true";
+    }
+    else{
+        asnwer ="False";
+    }
+    alert(answer)
+    document.getElementById("result").value = answer;
+
+    // document.getElementById("result").value
+}
+
+   </script>
+</body>
+</html>

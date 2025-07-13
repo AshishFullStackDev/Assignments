@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Function Class</title>
+    <style>
+        body
+        {
+            width: 100vw;
+            height: 100vh;
+        }
+        .container
+        {
+            width: 30%;
+            height: 70%;
+            background-color: lightblue;
+            border-radius: 10px;
+            margin-left: 500px;
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: 1fr;
+            
+    
+
+        }
+        .display
+        {
+            width: 80%;
+            height: 100%;
+            background-color: bisque;
+            margin-left: 43px;
+            margin-top: 10px;
+            text-align: center;
+            font-size: 30px;
+        }
+        .text
+        {
+            font-size: 20px;
+            color: black;
+            width: 100px;
+        }
+        input
+        {
+            width: 75%;
+            height: 50%;
+            background-color: antiquewhite;
+            margin-left: 49px;
+            margin-top: 30px;
+            font-size: 20px;
+
+        }
+        .submit-button
+        {
+            width: 80%;
+            height: 30%;
+            margin-left: 43px;
+            margin-top: 30px;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align:center;
+            
+
+        }
+        .submit-button:hover
+        {
+            background-color: green;
+        }
+        .button-group
+        {
+            width: 90%;
+            height: auto;
+            margin-left: 60px;
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px),1fr );
+            gap: 20px;
+        }
+        .btn
+        {
+            width: 150px;
+            height: 30px;
+            font-size: 20px;
+            margin-left: 150px;
+            margin-top: 20px;
+            font-size: 20px;
+            background-color: green;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- display section -->
+        <div class="display">
+            <span id="display"></span>
+        </div>
+        <!-- input section -->
+         <input type="text"  id="input" placeholder="Enter Number 1">
+         <input type="text"  id="input" placeholder="Enter Number 2">
+         <!-- button section -->
+          <button class="submit-button">Submit</button>
+          <!-- main container end -->
+    </div>
+    <!-- button group -->
+    <div class="button group">
+        <button class="btn" onclick="displayMonday()">Monday</button>
+        <button class="btn" onclick="displayTuesday()">Tuesday</button>
+        <button class="btn" onclick="displayWednesday()">Wednesday</button>
+        <button class="btn" onclick="displayThursday()">Thursday</button>
+        <button class="btn" onclick="displayfriday()">Friday</button>
+        <button class="btn" onclick="displaySaturday()">Saturday</button>
+        <button class="btn" onclick="displaySunday()">Sunday</button>
+        
+       </div>
+       <!-- button group end -->
+
+       <script>
+        function displayMonday(){
+            document.getElementById("display").innerHTML="Today is a Monday!";
+        }
+
+        function displayTuesday(){
+            document.getElementById("display").innerHTML="Today is a Tuesday!";
+        }
+
+        function displayWednesday(){
+            document.getElementById("display").innerHTML="Today is a Wednesday!";
+        }
+
+        function displayThursday(){
+            document.getElementById("display").innerHTML="Today is a Thursday!";
+        }
+
+        function displayfriday(){
+            document.getElementById("display").innerHTML="Today is a Friday!";
+        }
+
+        function displaySaturday(){
+            document.getElementById("display").innerHTML="Today is a Saturday!";
+        }
+
+        function displaySunday(){
+            document.getElementById("display").innerHTML="Today is a Sunday!";
+        }
+       </script>
+</body>
+</html>

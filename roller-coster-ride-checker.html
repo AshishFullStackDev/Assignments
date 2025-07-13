@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: grey;
+        }
+        
+        .container {
+            width: 30%;
+            height: 65%;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px;
+            margin-left: 500px;
+        }
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+       label{
+        font-size: 25px;
+        font-weight: bold;
+        text-align: left;
+       }
+       input{
+        font-size: 25px;
+       }
+       button{
+        font-size: 20px;
+        border-radius: 6px;
+       }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Roller Coaster Ride Checker</h1>
+        <div class="container-one">
+            <h2>Required to Ride</h2>
+            <ul>
+                <li>Your age is greater than 12 years</li>
+                <li>Your height is greater than 140m</li>
+            </ul>
+        </div>
+        <label for="">Your Age</label><br />
+        <input type="text" placeholder="" id="Age">
+        <br /><br />
+
+        <label for="">Your Height</label><br />
+        <input type="text" placeholder="" id="Height"><br /><br />
+
+        <button onclick="checkElegibilty()">Check Elegibility</button>
+    </div>
+
+
+    <script>
+        function checkElegibilty() {
+            let age = Number(prompt("Enter your age"));
+            let height = Number(prompt("Enter your height"));
+            let displayMessage = "";
+
+            if (age >= 12 && height >= 140) {
+                displayMessage = "Elegible to ride";
+            }
+            else {
+                displayMessage = "Not Elegible to ride";
+            }
+            alert(displayMessage);
+        }
+    </script>
+</body>
+
+</html>

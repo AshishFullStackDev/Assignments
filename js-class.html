@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            width: 100vw;
+            height: 100vh;
+        }
+        .container
+        {
+            width: 50%;
+            height: 80%;
+            border-style: solid;
+            border-radius: 3px;
+            border-color: black;
+            margin-left: 400px;
+            margin-top: 30px;
+        }
+        .display
+        {
+            width: 500px;
+            height: 30%;
+            border-style: solid;
+            border-radius: 3px;
+            border-color: black;
+            margin-left: 95px;
+            margin-top: 50px;
+        }
+        .input-field
+        {
+            width: 500px;
+            height: 10%;
+            margin-left: 120px;
+            margin-top: 80px;
+        }
+        input
+        {
+            width: 450px;
+            height: 100%;
+            font-size: 30px;
+        }
+        .btn
+        {
+            width: 80%;
+            height: 10%;
+            margin-left: 65px;
+            margin-top: 110px;
+            font-size: 30px;
+            color: black;
+            background-color: green;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="display" id="display"></div>
+    <div class="input-field">
+        <input type="number" id="input" placeholder="Enter a number">
+    </div>
+        <button class="btn" onclick="inputValue()">Submit</button>
+</div>
+   
+<script>
+     function ramu(){
+        alert("Hello javascript!");
+        let a =10; 
+        console.log(a);
+        return"Hello";
+     }
+
+     function displaySum(){
+        document.getElementById("display").innerHTML = "2 + 2 ="+ (2+2);
+        return 10;
+     }
+
+     function inputValue(){
+     let number = document.getElementById("input").value;
+
+     document.getElementById("display")
+     }
+</script>
+</body>
+</html>

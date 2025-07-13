@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Document</title>
+    <style>
+        body{
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        }
+        .main-container{
+            width: 50%;
+            height: 50%;
+            border-style: solid;
+            border-width: 3px;
+            border-color: black;
+        }
+        input{
+            font-size: 30px;
+            margin-left: 90px;
+            margin-top: 10px;
+        }
+        .container{
+            width: 62%;
+            height: 40%;
+            border-style: solid;
+            border-width: 3px;
+            border-color: black;
+            margin-top: 10px;
+            margin-left: 90px;
+            font-size: 24px;
+        }
+        button{
+            width: 63%;
+            height: 10%;
+            margin-left: 90px;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="main-container">
+        <input type="text" id="inputone"><br/>
+        <input type="text" id="inputtwo"><br/>
+       <div class="container">
+        <div id="showsum">SUM=</div>
+        <div id="showdiff">DIFF=</div>
+        <div id="showmulti">MULTI=</div>
+        <div id="showdiv">DIV=</div>
+        <div id="showmod">MOD=</div> 
+    </div> <br>
+        <button id="result">Calculate</button>
+       
+        
+    </div>
+    <script>
+        let inputOne =Number (document.getElementById('input-one').value);
+        let inputTw0 =Number (document.getElementById('input-two').value);
+
+        let showSum =input-one + input-two;
+        let showDiff =input-one - input-two;
+        let showMulti = input-one * input-two;
+        let showDiv = input-one / input-two;
+        let showMod =input-one % input-two;
+
+        document.getElementById('showsum').innerHTML="SUM="+sum;
+        document.getElementById('showdiff').innerHTML="DIFF="-diff;
+        document.getElementById('showmulti').innerHTML="MULTI="*multi;
+        document.getElementById('sumdiv').innerHTML="DIV="/div;
+        document.getElementById('summod').innerHTML="MOD="%mod;
+
+        let display = document.getElementById("result").innerHTML
+       
+       
+    </script>
+</body>
+
+</html>

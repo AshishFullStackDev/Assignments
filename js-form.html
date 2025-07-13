@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        .main-container{
+            width: 100%;
+            height: 100%; 
+        }
+     
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <label for="num1"> First Number:</label>
+        <input type="number" id="num1"><br /><br />
+        <label for="num2"> Second Number:</label>
+        <input type="number" id="num2"><br /><br />
+
+        <button onclick="compareNumber()">Compare Number (first > second)</button>
+
+        <div id="result"></div>
+    </div>
+    <script>
+        function compareNumber(){
+            const num1 = Number (document.getElementById("num1").value);
+            const num2 = Number (document.getElementById("num2").value);
+            const resultDiv = document.getElementById("result").innerHTML =num1 > num2;
+        }
+    </script>
+</body>
+
+</html>

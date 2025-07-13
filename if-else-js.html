@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: skyblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-container{
+            width: 40%;
+            height: 50%;
+            background-color: white;
+        }
+        h1{
+            text-align: center;
+        }
+        input{
+            width: 50%;
+            height: 10%;
+            margin-left: 100px;
+        }
+        button{
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+            <h1>Positive or Negative Checker</h1>
+            <input type="number" id="number"><br/>
+            <button onclick="clickButton()">Check</button>
+        
+    </div>
+
+    <script>
+        let number = Number(prompt("Enter a Number" ));
+        let result = "";
+
+        if (number == 0){  
+         result = "Number is neutral";
+        }
+            else{
+                if (numbe > 0){
+                result = "Number is positive "
+            }
+            else{
+                result = "Number is negative "
+            }
+
+            }
+        alert(result);
+        console.log(result);
+    </script>
+</body>
+</html>
