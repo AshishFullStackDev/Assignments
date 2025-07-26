@@ -4,182 +4,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Resume - Jay Kale</title>
+    <title>Document</title>
     <style>
-        body {
-            font-family: "Arial", sans-serif;
-            background: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
+         body {
+      background: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-        .resume {
-            width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-        }
+    .main-container {
+      background: #ffffff;
+      padding: 30px 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
 
-        header {
-            text-align: center;
-            border-bottom: 3px solid #333;
-            padding-bottom: 20px;
-        }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+    }
 
-        h1 {
-            color: #333;
-            font-size: 28px;
-            font-weight: bold;
-        }
+    input {
+      display: block;
+      width: 100%;
+      padding: 12px 16px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
 
-        h2 {
-            color: #444;
-            font-size: 22px;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-        }
+    input:focus {
+      outline: none;
+      border-color: #4A90E2;
+    }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4A90E2;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 15px;
+    }
 
-        ul li {
-            margin: 5px 0;
-            font-size: 16px;
-        }
+    button:hover {
+      background-color: #357ABD;
+    }
 
-        a {
-            color: #0073b1;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .contact,
-        .linkedin {
-            font-size: 16px;
-            margin: 5px 0;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.8;
-        }
-
-        .skill-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-item {
-            background: #0073b1;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        .resume section {
-            margin-bottom: 25px;
-        }
-
-        img {
-            background-color:rgb(226, 220, 220);
-            border-radius: 50%;
-
-        }
+    #output {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #222;
+    }
     </style>
 </head>
 
 <body>
+    <div class="main-container">
+        <h1 id="output"></h1>
+        <input type="number" id="input-one" placeholder="Enter Number One">
+        <input type="number" id="input-two" placeholder="Enter Number Two">
+        <input type="text" id="input-three" placeholder="Enter Operation">
 
-    <div class="resume">
-        <header>
-            <div class="header-content">
-                <div class="images">
-                    <img src="../assets/images/jay-resume.png" 
-                    alt="" height="100px" width="100px">
-                </div>
-                <h1>JAY KALE</h1>
-                <p class="contact">Nagpur, Maharashtra, India | 📧 kalej544@gmail.com | 📞 +91 8766576841 </p>
-                <p class="linkedin"><a
-                        href="https://www.linkedin.com/in/jay-kale-5b837835a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                        target="_blank">LinkedIn: jay-kale</a></p>
-            </div>
-        </header>
-
-        <main>
-            <section class="career-objective">
-                <h2>Career Objective</h2>
-                <p>A **highly skilled Mechanical Engineering Diploma holder** with expertise
-                     in **AutoCAD, mechanical
-                    design, and 3D modeling**. Seeking an opportunity to apply technical
-                     proficiency and innovation in
-                    the automotive or mechanical engineering field.</p>
-            </section>
-
-            <section class="skills">
-                <h2>Technical Skills</h2>
-                <div class="skill-grid">
-                    <div class="skill-item">🔹 <strong>AutoCAD</strong> – Advanced (90%)</div>
-                    <div class="skill-item">🔹 <strong>Technical Drawing</strong> – Proficient (85%)</div>
-                    <div class="skill-item">🔹 <strong>3D Modeling</strong> – Intermediate (75%)</div>
-                    <div class="skill-item">🔹 <strong>Mechanical Design</strong> – Proficient (85%)</div>
-                    <div class="skill-item">🔹 <strong>SolidWorks</strong> – Intermediate (75%)</div>
-                </div>
-            </section>
-
-            <section class="education">
-                <h2>Education</h2>
-                <p><strong>Diploma in Mechanical Engineering</strong> (2022 – 2025)
-                    <br> G.H. Raisoni College of
-                    Engineering and Management
-                </p>
-                <p><strong>10th Standard</strong>
-                    <br> Banarasidas Ruiya English Medium High School
-                </p>
-            </section>
-
-            <section class="experience">
-                <h2>Internship Experience</h2>
-                <p><strong>Mechanical Engineering Intern</strong>
-                    – Ketan Hyundai (Summer 2023)</p>
-                <ul>
-                    <li>✅ Diagnosed mechanical issues in Hyundai vehicles</li>
-                    <li>✅ Collaborated with senior technicians on maintenance tasks</li>
-                    <li>✅ Documented specifications and maintenance protocols</li>
-                    <li>✅ Gained hands-on exposure to engines, transmissions, and suspensions</li>
-                    <li>✅ Participated in final vehicle quality testing</li>
-                </ul>
-            </section>
-
-            <section class="achievements">
-                <h2>Projects & Achievements</h2>
-                <ul>
-                    <li>🏆 <strong>3D Engine Prototype Design</strong> – SolidWorks</li>
-                    <li>🏆 <strong>Winner</strong> – CAD Design Competition</li>
-                    <li>🏆 <strong>Participant</strong> – Technical Symposium for mechanical innovation</li>
-                </ul>
-            </section>
-
-            <section class="languages">
-                <h2>Languages</h2>
-                <ul>
-                    <li>🗣 <strong>English</strong> – Professional</li>
-                    <li>🗣 <strong>Hindi</strong> – Native</li>
-                    <li>🗣 <strong>Marathi</strong> – Native</li>
-                </ul>
-            </section>
-
-            <section class="interests">
-                <h2>Interests</h2>
-                <p>🚗 Automotive Engineering | ⚙️ Mechanical Innovation | 🏗 Machine Design</p>
-            </section>
-        </main>
+        <button onclick="Operation()">Submit</button>
     </div>
+    <script>
+        function add() {
+            const numOne = document.getElementById("input-one").value;
+            const numTwo = document.getElementById("input-two").value
 
+            const numThree = parseInt(numOne) + parseInt(numTwo);
+            document.getElementById("output").innerHTML = numThree;
+
+
+        }
+        function sub() {
+            const numOne = document.getElementById("input-one").value;
+            const numTwo = document.getElementById("input-two").value
+
+            const numThree = parseInt(numOne) - parseInt(numTwo);
+            document.getElementById("output").innerHTML = numThree
+        }
+        function mul() {
+            const numOne = document.getElementById("input-one").value;
+            const numTwo = document.getElementById("input-two").value
+
+            const numThree = parseInt(numOne) * parseInt(numTwo);
+            document.getElementById("output").innerHTML = numThree
+        }
+        function div() {
+            const numOne = document.getElementById("input-one").value;
+            const numTwo = document.getElementById("input-two").value
+
+            const numThree = parseInt(numOne) / parseInt(numTwo);
+            document.getElementById("output").innerHTML = numThree
+        }
+        function Operation() {
+            let x = document.getElementById("input-three").value;
+
+            if (x === "") {
+                alert("Enter Operation");
+                return;
+            }
+
+            if (x === "add") {
+                add();
+            } else if (x === "sub") {
+                sub();
+            } else if (x === "mul") {
+                mul();
+            } else if (x === "div") {
+                div();
+            } else {
+                alert("Invalid operation");
+            }
+        }
+
+
+
+
+    </script>
 </body>
 
 </html>
