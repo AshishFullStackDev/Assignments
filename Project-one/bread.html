@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Beard Codex</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #fff;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .main-title {
+      font-size: 4rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #ff6b35, #f7931e, #ffd23f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #b8c6db;
+      font-style: italic;
+      margin-top: 20px;
+    }
+
+    .gallery-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .gallery-item {
+      background: linear-gradient(145deg, #1e2a5a, #2d3a70);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+      height: 250px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.8) contrast(1.1);
+    }
+
+    .caption-container {
+      padding: 20px;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    }
+
+    .caption {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 8px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .style-number {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: linear-gradient(135deg, #ff6b35, #ffd23f);
+      color: #1a1a2e;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .style-tag {
+      background: rgba(255, 255, 255, 0.1);
+      color: #b8c6db;
+      padding: 4px 12px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      display: inline-block;
+      margin-top: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .difficulty-indicator {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      display: flex;
+      gap: 3px;
+    }
+
+    .difficulty-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .difficulty-dot.active {
+      background: linear-gradient(135deg, #ff6b35, #ffd23f);
+    }
+
+    @media (max-width: 768px) {
+      .main-title {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+      }
+      
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+      
+      .image-container {
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 15px;
+      }
+      
+      .main-title {
+        font-size: 2rem;
+      }
+      
+      .gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1 class="main-title">The Beard Codex</h1>
+    <p class="subtitle">Master the Art of Facial Hair Excellence</p>
+  </div>
+
+  <div class="gallery-container">
+    <div class="gallery">
+      <div class="gallery-item">
+        <div class="style-number">01</div>
+        <div class="image-container">
+          <img src="https://cdn.shopify.com/s/files/1/0639/1237/8602/files/Short_Full_Beard_480x480.jpg?v=1720177305" alt="Full Beard">
+          <div class="difficulty-indicator">
+            <div class="difficulty-dot active"></div>
+            <div class="difficulty-dot active"></div>
+            <div class="difficulty-dot"></div>
+          </div>
+        </div>
+        <div class="caption-container">
+          <div class="caption">Full Beard</div>
+          <div class="style-tag">Classic • Versatile</div>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="style-number">02</div>
+        <div class="image-container">
+          <img src="https://www.wild-willies.com/cdn/shop/articles/Petite_Goatee_575cacab-d03d-404c-bc2d-03a5b4d5cca9.jpg?v=1675112870" alt="Goatee">
+          <div class="difficulty-indicator">
+            <div class="difficulty-dot active"></div>
+            <div class="difficulty-dot"></div>
+            <div class="difficulty-dot"></div>
+          </div>
+        </div>
+        <div class="caption-container">
+          <div class="caption">Goatee</div>
+          <div class="style-tag">Simple • Clean</div>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="style-number">03</div>
+        <div class="image-container">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvi4VOlaIYsnLWBjexly8gBd_YzOfmpgGLoQ&s" alt="Van Dyke">
+          <div class="difficulty-indicator">
+            <div class="difficulty-dot active"></div>
+            <div class="difficulty-dot active"></div>
+            <div class="difficulty-dot active"></div>
+          </div>
+        </div>
+        <div class="caption-container">
+          <div class="caption">Van Dyke</div>
+          <div class="style-tag">Sophisticated • Royal</div>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="style-number">04</div>
+        <div class="image-container">
+          <img src="https://i.pinimg.com/736x/38/d5/9f/38d59ff74c0008b44c30c587f16445d8.jpg" alt="Balbo">
+          <div class="difficulty-indicator">
+            <div class="difficulty-dot active"></div>
+            <div class="difficulty-dot active"></div>
+            <div class="difficulty-dot"></div>
+          </div>
+        </div>
+        <div class="caption-container">
+          <div class="caption">Balbo</div>
+          <div class="style-tag">Modern • Edgy</div>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="style-number">05</div>
+        <div class="image-container">
+          <img src="https://www.wild-willies.com/cdn/shop/articles/Anchor_Beard_30eb9d5e-df08-423d-8873-4c1090edc0cd.jpg?v=1670508044" alt="Anchor">
+          <div class="difficulty-indicator">
+            <div class="difficulty-dot active"></div>
+            <div class="difficulty-dot active"></div>
+            <div class="difficulty-dot active"></div>
+          </div>
+        </div>
+        <div class="caption-container">
+          <div class="caption">Anchor</div>
+          <div class="style-tag">Precise • Maritime</div>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="style-number">06</div>
+        <div class="image-container">
+          <img src="https://www.apetogentleman.com/wp-content/uploads/2025/04/classic-french-crop-4.jpg" alt="French Crop">
+          <div class="difficulty-indicator">
+            <div class="difficulty-dot active"></div>
+            <div class="difficulty-dot"></div>
+            <div class="difficulty-dot"></div>
+          </div>
+        </div>
+        <div class="caption-container">
+          <div class="caption">French Crop</div>
+          <div class="style-tag">Continental • Refined</div>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="style-number">07</div>
+        <div class="image-container">
+          <img src="https://i.pinimg.com/736x/cb/ed/ab/cbedab89b5ca130e7291b282c76e2840.jpg" alt="Ducktail">
+          <div class="difficulty-indicator">
+            <div class="difficulty-dot active"></div>
+            <div class="difficulty-dot active"></div>
+            <div class="difficulty-dot"></div>
+          </div>
+        </div>
+        <div class="caption-container">
+          <div class="caption">Ducktail</div>
+          <div class="style-tag">Vintage • Rockabilly</div>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="style-number">08</div>
+        <div class="image-container">
+          <img src="https://i.pinimg.com/736x/86/48/9f/86489f2e8685c5daa875e742f6428f50.jpg" alt="Soul Patch">
+          <div class="difficulty-indicator">
+            <div class="difficulty-dot active"></div>
+            <div class="difficulty-dot"></div>
+            <div class="difficulty-dot"></div>
+          </div>
+        </div>
+        <div class="caption-container">
+          <div class="caption">Soul Patch</div>
+          <div class="style-tag">Minimal • Artistic</div>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="style-number">09</div>
+        <div class="image-container">
+          <img src="https://wahlusa.com/media/wysiwyg/Facial_FullFace_Klingon1_0.jpg" alt="Klingon">
+          <div class="difficulty-indicator">
+            <div class="difficulty-dot active"></div>
+            <div class="difficulty-dot active"></div>
+            <div class="difficulty-dot active"></div>
+          </div>
+        </div>
+        <div class="caption-container">
+          <div class="caption">Klingon</div>
+          <div class="style-tag">Bold • Warrior</div>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <div class="style-number">10</div>
+        <div class="image-container">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVUELk9LTP_rJ7rHc9hcMml5KRrJuYOZZznQ&s" alt="Zappa">
+          <div class="difficulty-indicator">
+            <div class="difficulty-dot active"></div>
+            <div class="difficulty-dot active"></div>
+            <div class="difficulty-dot"></div>
+          </div>
+        </div>
+        <div class="caption-container">
+          <div class="caption">Zappa</div>
+          <div class="style-tag">Iconic • Musician</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
