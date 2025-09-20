@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 100vw;
+            height: 80px;
+            background-color: cornflowerblue;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            color: white;
+        }
+
+        button {
+            background-color: white;
+            color: cornflowerblue;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="productcount">Product Count: 0</h1>
+        <button onclick="addProduct()">Add Product +</button>
+        <h1 id="cartcount">Cart: 0</h1>
+    </header>
+
+    <p id="display"></p>
+
+    <script src="./produjctData.js"></script>
+    <script>
+        let cartArray = [];
+        let cartCount = 0;
+
+        function addProduct() {
+            let productName = prompt("Enter product name:");
+            let productPrice = prompt("Enter product price:");
+
+            productData.push({
+                name: productName,
+                price: productPrice
+            });
+
+            showProducts();
+            showProductCount();
+        }
+
+        function showProductCount() {
+            document.getElementById("productcount").innerText = "Product Count: " + productData.length;
+        }
+
+        function showProducts() {
+            const display = document.getElementById("display");
+            display.innerHTML = ""; 
+
+            productData.map((product, index) => {
+                display.innerHTML += `<p>${product.name}<br>
+                    Price: ${product.price}</p>
+                    <button onclick="removeProduct(${index})">Remove</button>
+                    <button onclick="addCart(${index})">Add To Cart</button>
+                    <br>`;
+            });
+        }
+
+        function removeProduct(index) {
+            productData.splice(index, 1);
+            showProducts(); 
+            showProductCount();
+        }
+
+        function addCart(index) {
+            cartArray.push(productData[index]);
+            cartCount++;
+            document.getElementById("cartcount").innerText = `Cart: ${cartCount}`;
+            console.log("Cart Items:", cartArray);
+        }
+
+      
+        showProducts();
+        showProductCount();
+    </script>
+</body>
+
+</html>
